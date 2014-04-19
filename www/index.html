@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Mwa3edy</title>
+        <meta name="description" content="">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">HBMsU appointments</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Create appointment!</h1>
+        <p>Please pick date and time for your appointment. You can set reminder minutes also!</p>
+        <button id="btn-create" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#appointment-modal">Create now!</button>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="appointment-modal" tabindex="-1" role="dialog" aria-labelledby="appointment-modalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="appointment-modalLabel">Creating appointment</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal" role="form">
+
+              <div class="form-group">
+                <label for="title" class="col-xs-12 control-label">Title</label>
+                <div class="col-xs-12">
+                  <input id="title" type="text" class="form-control input-lg">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="date" class="col-xs-12 control-label">Appointment Date</label>
+                <div class="col-xs-12">
+                  <input id="date" type="date" class="form-control input-lg">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="time" class="col-xs-12 control-label">Appointment Time</label>
+                <div class="col-xs-12">
+                  <input id="time" type="time" class="form-control input-lg">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="minutes" class="col-xs-12 control-label">Alarm before:</label>
+                <div class="col-xs-12">
+                  <input id="minutes" type="number" class="form-control input-lg" value="2">
+                </div>
+              </div>
+
+              <!-- We can also show NOTES textarea box, but it's not required for this assignment :)
+              <div class="form-group">
+                <label for="notes" class="col-xs-12 control-label">Notes:</label>
+                <div class="col-xs-12">
+                  <textarea id="notes" class="form-control input-lg" name="notes"></textarea>
+                </div>
+              </div> -->
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Cancel</button>
+            <button id="btn-save" type="button" class="btn btn-success btn-lg">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <hr>
+
+      <footer>
+        <p>&copy; Ammar Alrefai - 2014</p>
+      </footer>
+
+    </div>
+
+    <script src="js/vendor/jquery-1.11.0.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+
+    </body>
+</html>
